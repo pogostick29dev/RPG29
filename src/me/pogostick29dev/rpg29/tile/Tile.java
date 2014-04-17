@@ -22,7 +22,7 @@ public enum Tile {
         if (environment == null) environment = new Tilesheet("environment");
 
         this.id = id;
-        this.image = environment.getTile(x, y);
+        this.image = environment.getTile(x - 1, y - 1);
         this.layer = layer;
     }
 

@@ -1,0 +1,18 @@
+Test
+OUTSIDE
+5 5
+E E E E E E E E E E E E E E E E E E E E
+E E E E E E E E E E E E E E E E E E E E
+E E E E E E E E E E E E E E E E E E E E
+E E E E E E E E E E E E E E E E E E E E
+E E E E E E WV E E E E E E E E E E E E E
+E E E E E E E E E E E E E E E E E E E E
+E E E E E E E E E E E E E E E E E E E E
+E E E E E E E E E WH E E E E E E E E E E
+E E E E E E E E E E E E E E E E E E E E
+E E E E E E E E E E E E E E E E E E E E
+E E E E E E E E E E E E E E E E E E E E
+E E E E E E E E E E E E E E E E E E E E
+E E E E E E E E E E E E E E E E E E E E
+E E E E E E E E E E E E E E E E E E E E
+E E E E E E E E E E E E E E E E E E E E
