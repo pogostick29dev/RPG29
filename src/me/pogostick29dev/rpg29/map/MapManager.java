@@ -1,5 +1,6 @@
 package me.pogostick29dev.rpg29.map;
 
+import me.pogostick29dev.rpg29.gui.Frame;
 import me.pogostick29dev.rpg29.util.ResourceUtil;
 
 import java.io.BufferedReader;
@@ -40,6 +41,7 @@ public class MapManager {
 
     public void setCurrentMap(Map map) {
         this.currentMap = map;
+        Frame.getInstance().getGUI().getPlayer().setCurrentLocation(map.getSpawn());
     }
 
     public Map getMap(String name) {
