@@ -1,6 +1,10 @@
 package me.pogostick29dev.rpg29.gui;
 
 import me.pogostick29dev.rpg29.entity.Player;
+import me.pogostick29dev.rpg29.event.EventDispatcher;
+import me.pogostick29dev.rpg29.event.events.InteractEvent;
+import me.pogostick29dev.rpg29.event.events.InteractWithEntityEvent;
+import me.pogostick29dev.rpg29.event.events.MoveEvent;
 import me.pogostick29dev.rpg29.map.Direction;
 import me.pogostick29dev.rpg29.map.Location;
 import me.pogostick29dev.rpg29.map.MapManager;
@@ -48,9 +52,9 @@ public class GUI extends JPanel {
                     );
 
                     if (interactedLocation.getEntity() != null) {
-                        // Call InteractWithEntityEvent
+                        EventDispatcher.getInstance().callEvent(new InteractWithEntityEvent(interactedLocation, interactedLocation.getEntity()));
                     } else {
-                        // Call InteractEvent
+                        EventDispatcher.getInstance().callEvent(new InteractEvent(interactedLocation));
                     }
                 } catch (IndexOutOfBoundsException ignored) {
                 }
@@ -139,9 +143,9 @@ public class GUI extends JPanel {
             });
 
             if (didMove) {
-                // Call event.
+                EventDispatcher.getInstance().callEvent(new MoveEvent(from));
             }
-        } catch (IndexOutOfBoundsException ingored) {
+        } catch (IndexOutOfBoundsException ignored) {
         }
     }
 }
