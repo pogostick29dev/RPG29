@@ -18,4 +18,9 @@ public class ThreadUtil {
         t.setRepeats(false);
         t.start();
     }
+
+    public static void runThreadInBackground(final Runnable run) {
+        Thread thread = new Thread(run);
+        thread.start();
+    }
 }

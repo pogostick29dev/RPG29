@@ -1,5 +1,6 @@
 package me.pogostick29dev.rpg29.map;
 
+import me.pogostick29dev.rpg29.audio.Music;
 import me.pogostick29dev.rpg29.util.ResourceUtil;
 
 import java.awt.*;
@@ -12,6 +13,7 @@ public class Map {
     private ArrayList<Row> rows;
     private String name;
     private MapType type;
+    private Music backgroundMusic;
     private Location spawn;
 
     public Map(String name) {
@@ -22,6 +24,7 @@ public class Map {
 
             this.name = reader.readLine();
             this.type = MapType.valueOf(reader.readLine());
+            this.backgroundMusic = Music.valueOf(reader.readLine());
 
             String spawnLine = reader.readLine();
             int spawnRow = Integer.valueOf(spawnLine.split(" ")[0]);
@@ -62,6 +65,10 @@ public class Map {
 
     public Location getLocation(Point point) {
         return getLocation(point.x, point.y);
+    }
+
+    public Music getBackgroundMusic() {
+        return backgroundMusic;
     }
 
     public Location getSpawn() {

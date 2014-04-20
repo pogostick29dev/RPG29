@@ -14,6 +14,8 @@ public class Frame extends JFrame {
         gui = new GUI();
         add(gui);
 
+//        new JFXPanel(); // Set up JavaFX audio player.
+
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -21,6 +23,7 @@ public class Frame extends JFrame {
             }
         });
 
+//        setUndecorated(true); // Get rid of bevel and top bar.
         setSize(640, 500);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);

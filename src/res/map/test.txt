@@ -1,5 +1,6 @@
 Test
 OUTSIDE
+VILLAGE
 5 5
 E E E E E E E E E E E E E E E E E E E E
 E E E E E E E E E E E E E E E E E E E E
