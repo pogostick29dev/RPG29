@@ -73,6 +73,14 @@ public class GUI extends JPanel {
         drawTiles(g, Layer.ON);
         drawTiles(g, Layer.ENTITY);
         drawTiles(g, Layer.ABOVE);
+
+        g.setColor(Color.WHITE);
+        g.setFont(new Font(Font.SANS_SERIF, Font.ITALIC, 18));
+        g.drawString(
+                "Testing",
+                (Frame.getInstance().getWidth() / 2) + (g.getFontMetrics().stringWidth("Testing") / 2),
+                (Frame.getInstance().getHeight() / 2) + (g.getFontMetrics().getHeight() / 2)
+        );
     }
 
     private void drawTiles(Graphics g, Layer l) {
